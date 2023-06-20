@@ -29,14 +29,14 @@ public class TestUserProfile
    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
-        // Display available genres
+      
         System.out.println("Available Genres:");
         String[] genres = {"Comedy", "Drama", "Action", "Mystery"};
         for (int i = 0; i < genres.length; i++) {
             System.out.println((i + 1) + ". " + genres[i]);
         }
         
-        // Prompt user for input
+       
         System.out.print("Enter your name: ");
         String name = input.nextLine();
         
@@ -44,7 +44,7 @@ public class TestUserProfile
         int genreChoice = input.nextInt();
         input.nextLine(); // Consume the newline character
         
-        // Validate genre choice
+      
         if (genreChoice < 1 || genreChoice > genres.length) {
             System.out.println("Invalid genre choice.");
             return;
@@ -52,10 +52,10 @@ public class TestUserProfile
         
         String favoriteGenre = genres[genreChoice - 1];
         
-        // Create user profile
+    
         UserProfile userProfile = new UserProfile(name, favoriteGenre);
         
-        // Display success message
+    
         System.out.println("User profile created");
         System.out.println("Name: " + userProfile.getUserID());
         System.out.println("Favorite Genre: " + userProfile.getGenre());
@@ -63,4 +63,4 @@ public class TestUserProfile
     
     
     
-}//end class
+}
